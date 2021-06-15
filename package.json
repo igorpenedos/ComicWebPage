@@ -8,6 +8,9 @@
     "start": "node server.js",
     "heroku-postbuild": "cd comic && npm install --only=dev && npm install && npm run build"
   },
+  "engines": {
+    "node": "8.9.2"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
