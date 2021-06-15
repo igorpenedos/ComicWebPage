@@ -9,7 +9,7 @@
     "heroku-postbuild": "cd comic && npm install && npm run build"
   },
   "engines": {
-    "node": "8.9.2"
+    "node": "14.15.3"
   },
   "keywords": [],
   "author": "",
