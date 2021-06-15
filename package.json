@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build":"webpack",
     "heroku-postbuild": "npm install --only=dev && npm install && npm start"
   },
   "engines": {
