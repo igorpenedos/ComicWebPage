@@ -33,7 +33,7 @@ const Comic = (props) => {
 
   useEffect(() =>{
     document.getElementById('number').value = '';
-    const getData = async () => {setData(await axios.get('http://localhost:4000/getData', {params:{Num}}))};
+    const getData = async () => {setData(await axios.get('https://comicviewerweb.herokuapp.com/getData', {params:{Num}}))};
     getData();
   }, [Num]);
 
