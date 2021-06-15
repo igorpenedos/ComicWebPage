@@ -15,9 +15,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "node backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
-    "build": "react-scripts build",
+    "start": "node server.js",
+    "build": "cd comic && npm run build",
+    "install": "cd comic && npm install",
+    "heroku-postbuild": "npm run install-comic && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,9 +39,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engines": {
-    "node": "10.16.0"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",

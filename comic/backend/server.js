@@ -16,6 +16,12 @@ app.get('/getData', (req, res) => {
     .then(response => res.send(response));
 })
 
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static('comic/build'))
+}
+
+
+
 app.listen(PORT, () => {
     console.log("Listening to Port: " + PORT);
 });
