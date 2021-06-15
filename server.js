@@ -16,14 +16,7 @@ app.get('/getData', (req, res) => {
     .then(response => res.send(response));
 })
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-
+app.use(express.static(__dirname + '/build/index.html'))
 
 app.listen(PORT, () => {
     console.log("Listening to Port: " + PORT);
