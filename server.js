@@ -4,6 +4,7 @@ const app = express();
 const parser = require('cookie-parser');
 const cors = require('cors');
 const fetch = require('node-fetch');
+const path = require('path');
 
 app.use(express.json());
 app.use(parser());
@@ -16,7 +17,11 @@ app.get('/getData', (req, res) => {
     .then(response => res.send(response));
 })
 
-app.use(express.static('/build/index.html'))
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.listen(PORT, () => {
     console.log("Listening to Port: " + PORT);
