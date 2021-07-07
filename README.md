@@ -1,2 +1,2 @@
-Project used to learn React.js /n
+Project used to learn React.js  
 Hosted on Heroku: https://comicviewerweb.herokuapp.com/
